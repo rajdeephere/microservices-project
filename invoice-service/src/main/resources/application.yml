@@ -11,5 +11,10 @@ spring:
     baseline-on-migrate: true
     default-schema: invoice_db
 
+  jpa:
+    properties:
+      hibernate:
+        default_schema: invoice_db
+
 server:
   port: 9001
