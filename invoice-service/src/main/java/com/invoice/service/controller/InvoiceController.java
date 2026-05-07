@@ -13,12 +13,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/v1/invoices")
+@RequestMapping("/v1")
 public class InvoiceController {
 
   private final InvoiceService invoiceService;
 
-  @GetMapping
+  @GetMapping("/invoices")
   public List<InvoiceDto> getInvoicesByUserId(@RequestParam("user_id")  String userId) {
     return invoiceService.getInvoicesByUserId(userId);
 
